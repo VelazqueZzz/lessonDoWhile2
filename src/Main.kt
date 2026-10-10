@@ -3,16 +3,11 @@
 fun main() {
     print("Введите количество секунд: ")
     val seconds = readln().toInt()
-
-    var remaining = seconds   // сколько секунд осталось
-
+    var remaining = seconds
     do {
-        if (remaining > 0) {
-            println("Осталось секунд: $remaining")
-        }
-        Thread.sleep(1000)    // пауза 1 секунда
-        remaining--           // уменьшаем счётчик
+        println("Осталось секунд: $remaining")
+        Thread.sleep(1000)
+        remaining--
     } while (remaining > 0)
-
     println("Время вышло")
 }
